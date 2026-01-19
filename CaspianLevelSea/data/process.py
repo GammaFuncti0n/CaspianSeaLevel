@@ -3,6 +3,7 @@ import pandas as pd
 import sqlite3
 import zipfile
 import io
+import os
 import logging
 
 logging.basicConfig(
@@ -86,6 +87,9 @@ class ObjectProcessor():
         
         self.metadata_df.append(meta_info)
         df_.to_sql(name=post_file, con=self.conn, if_exists='replace', index=False)
+        # Save in pandas dataframe, should be removed
+        os.makedirs("data/dataframe/", exist_ok=True)
+        df_.to_csv(f"./data/dataframe/{post_file}.csv", index=False)
 
         logging.info(f"Succesfully save post: {post_file}")
 
