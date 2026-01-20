@@ -4,14 +4,6 @@ from bs4 import BeautifulSoup
 import os
 from pathlib import Path
 
-logging.basicConfig(
-    level=logging.INFO, 
-    filename="log.log", 
-    filemode="w", 
-    format="%(asctime)s %(levelname)s %(message)s", 
-    encoding='utf-8'
-    )
-
 class Loader():
     '''
     Class for load raw data from the site

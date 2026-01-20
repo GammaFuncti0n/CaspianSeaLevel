@@ -1,6 +1,15 @@
 import yaml
+import logging
 from CaspianLevelSea.data.loader import Loader
 from CaspianLevelSea.data.process import ObjectProcessor
+
+logging.basicConfig(
+    level=logging.DEBUG, 
+    filename="log.log", 
+    filemode="w", 
+    format="%(asctime)s %(levelname)s %(message)s", 
+    encoding='utf-8'
+    )
 
 def main():
     with open('configs/config.yaml', 'r', encoding='utf-8') as f:
@@ -14,6 +23,11 @@ def main():
         config['data']['raw_data_path'], 
         config['data']['object_path'], 
         config['data']['metadata_path']
+        )
+    processor.process_data(
+        config['data']['object_path'], 
+        config['data']['metadata_path'],
+        config['data']['data_path']
         )
 
 if __name__=='__main__':

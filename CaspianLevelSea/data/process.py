@@ -55,12 +55,41 @@ class ObjectProcessor():
             pd.DataFrame(self.metadata_df).to_csv(metadata_path, index=False)
         self.conn.close()
     
+    def process_data(self, object_path: str, metadata_path: str, data_path: str) -> None:
+        '''
+        Method for process raw data (objects) and save in data_path
+        :params:
+            object_path: str - path to object storage where load data
+            metadata_path: str - path with metadata storage
+            data_path: str - path where contain proocessed data 
+        '''
+        # Load metadata and zero-level
+        metadata_df = pd.read_csv(metadata_path)
+
+        # Make connection to sqlite server
+        self.conn = sqlite3.connect(object_path)
+
+        # Process data
+        os.makedirs(data_path, exist_ok=True)
+        post_names = pd.read_sql("SELECT name FROM sqlite_master", self.conn)['name']
+        for post_name in post_names:
+            df = pd.read_sql(f"SELECT * FROM {post_name}", self.conn)
+            zero_level = metadata_df[metadata_df['post_file']==post_name]['post_datum'].values[0]
+            logging.debug(f"{post_name} zero level: {zero_level}")
+            zero_level = float(str(zero_level).replace(',', '.'))
+            
+            df['sea_level'] = pd.to_numeric(df['sea_level'], errors='coerce')/100 + zero_level
+            df.to_csv(os.path.join(data_path, f"{post_name}.csv"))
+            logging.info(f"Succesfully save dataframe: {post_name}.csv")
+        self.conn.close()
+    
     def _process_file(self, file_name) -> None:
         '''
         Method for process one file (post) and save result in database
         '''
         post_file = self._get_post_name(file_name)
         meta_info = {key: None for key in self.metadata_patterns}
+        meta_info['post_file'] = post_file
 
         # Open file
         with self.zf.open(file_name) as zip_file:
@@ -87,9 +116,6 @@ class ObjectProcessor():
         
         self.metadata_df.append(meta_info)
         df_.to_sql(name=post_file, con=self.conn, if_exists='replace', index=False)
-        # Save in pandas dataframe, should be removed
-        os.makedirs("data/dataframe/", exist_ok=True)
-        df_.to_csv(f"./data/dataframe/{post_file}.csv", index=False)
 
         logging.info(f"Succesfully save post: {post_file}")
 
