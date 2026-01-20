@@ -3,4 +3,4 @@ data:
   raw_data_path: 'data/level_sea.zip'
   object_path: 'data/sea_level_objects.db'
   metadata_path: 'data/metadata.csv'
-  data_path: 'data/processed_data'
+  data_path: 'data/processed_data/'
