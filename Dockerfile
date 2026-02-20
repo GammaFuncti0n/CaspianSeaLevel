@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     git \
     tmux \
     curl \
+    ghostscript \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
