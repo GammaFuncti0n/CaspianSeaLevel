@@ -4,8 +4,13 @@ set -euo pipefail
 
 ROOT_DIR="plots"
 
+counter=0
+total=$(find "$ROOT_DIR" -type f -name "*.pdf" | wc -l)
+
 find "$ROOT_DIR" -type f -name "*.pdf" | while read -r pdf; do
-    echo "Converting: $pdf"
+    ((counter += 1))
+    echo "$counter/$total]"
+    # echo "[$counter/$total] Converting: $pdf"
 
     tmp_pdf="${pdf%.pdf}_cmyk_tmp.pdf"
 

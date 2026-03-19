@@ -79,7 +79,7 @@ class ObjectProcessor():
             zero_level = -float(str(zero_level).replace(',', '.').replace('-', ''))
             
             df['sea_level'] = pd.to_numeric(df['sea_level'], errors='coerce')/100 + zero_level
-            df.to_csv(os.path.join(data_path, f"{post_name}.csv"))
+            df.to_csv(os.path.join(data_path, f"{post_name}.csv"), index=False)
             logging.info(f"Succesfully save dataframe: {post_name}.csv")
         self.conn.close()
     
