@@ -1,25 +1,25 @@
-,file_name,name_eng,name_rus,H
-0,AKTAU.csv,Aktau,Актау,-28.0
-1,ASHOR.csv,Ashuradeh,Ашураде,-27.147
-2,BAKU.csv,Baku,Баку,-28.0
-3,BEK.csv,Bekdash,Бекдаш,-28.0
-4,ISB.csv,Izberbash,Избербаш,-28.0
-5,KBG.csv,Kara-Bogaz-Gol,Кара-Богаз-Гол,-28.0
-6,KRASN.csv,Krasnovodsk,Красноводск,-28.0
-7,KUL.csv,Kulaly,Кулалы,-28.0
-8,KUULI.csv,Kuuli-Mayak,Куули-маяк,-28.0
-9,LAG.csv,Lagan,Лагань,-28.0
-10,LEN.csv,Lankaran,Ленкорань,-28.0
-11,MAKH.csv,Makhachkala,Махачкала,-28.0
-12,NEKA.csv,Neka,Нека,-26.86
-13,NKAMNI.csv,Neftyanye Kamni,Нефтяные Камни,-28.0
-14,NOUSHAR.csv,Nowshahr,Ноушехр,-26.137
-15,JILOYChilov.csv,Isl. Jiloy,о. Жилой,-28.0
-16,TUL.csv,Isl. Tyuleniy,о. Тюлений,-28.0
-17,OGUR.csv,Ogurchinskiy,Огурчинский,-28.0
-18,PESH.csv,Peshnoy,Пешной,-28.0
-19,SUMG.csv,Sumgait,Сумгаит,-28.0
-20,F_KENAR.csv,Fereydunkenar,Феридункенар,-27.687
-21,FORT.csv,Fort-Shevchenko,Форт-Шевченко,-28.0
-22,CHELEKEN.csv,Cheleken,Челекен,-28.0
-23,ANZALI.csv,Anzali,Энзели,-26.075
+file_name,name_eng,name_rus,H
+AKTAU.csv,Aktau,Актау,-28.0
+ASHOR.csv,Ashuradeh,Ашураде,-27.147
+BAKU.csv,Baku,Баку,-28.0
+BEK.csv,Bekdash,Бекдаш,-28.0
+ISB.csv,Izberbash,Избербаш,-28.0
+KBG.csv,Kara-Bogaz-Gol,Кара-Богаз-Гол,-28.0
+KRASN.csv,Krasnovodsk,Красноводск,-28.0
+KUL.csv,Kulaly,Кулалы,-28.0
+KUULI.csv,Kuuli-Mayak,Куули-маяк,-28.0
+LAG.csv,Lagan,Лагань,-28.0
+LEN.csv,Lankaran,Ленкорань,-28.0
+MAKH.csv,Makhachkala,Махачкала,-28.0
+NEKA.csv,Neka,Нека,-26.86
+NKAMNI.csv,Neftyanye Kamni,Нефтяные Камни,-28.0
+NOUSHAR.csv,Nowshahr,Ноушехр,-26.137
+JILOYChilov.csv,Isl. Jiloy,о. Жилой,-28.0
+TUL.csv,Isl. Tyuleniy,о. Тюлений,-28.0
+OGUR.csv,Ogurchinskiy,Огурчинский,-28.0
+PESH.csv,Peshnoy,Пешной,-28.0
+SUMG.csv,Sumgait,Сумгаит,-28.0
+F_KENAR.csv,Fereydunkenar,Феридункенар,-27.687
+FORT.csv,Fort-Shevchenko,Форт-Шевченко,-28.0
+CHELEKEN.csv,Cheleken,Челекен,-28.0
+ANZALI.csv,Anzali,Энзели,-26.075
