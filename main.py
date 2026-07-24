@@ -1,8 +1,7 @@
 import yaml
 import logging
-from CaspianLevelSea.data.loader import Loader
-from CaspianLevelSea.data.process import ObjectProcessor
-from CaspianLevelSea.visualize import DataVisualizer
+from src.data.loader import Loader
+from src.data.process import ObjectProcessor
 
 logging.basicConfig(
     level=logging.DEBUG, 
@@ -30,8 +29,6 @@ def main():
         config['data']['metadata_path'],
         config['data']['data_path']
         )
-    
-    # visualizer = DataVisualizer()
 
 if __name__=='__main__':
     main()

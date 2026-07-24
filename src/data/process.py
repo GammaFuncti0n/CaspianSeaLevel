@@ -126,7 +126,7 @@ class ObjectProcessor():
         'Sea-level-EN/AVERAGE/TUL_av.xls' -> 'TUL'
 
         First search lettres before '_av.'
-        After filter symbols ['(', ')', ' '] and shange them on ''
+        After filter symbols ['(', ')', ' '] and change them on ''
 
         :params:
             file_name: str - path to the file
